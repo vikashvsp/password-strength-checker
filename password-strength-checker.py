@@ -31,6 +31,11 @@ def main():
     floatStrength=float(('{0.real:.5f}'.format(passwordStrength)))*1.0
     print(floatStrength)
     #print(type(strStrength))
-
+    if(floatStrength<=0.6):
+        print("The Password is Weak")
+    elif(floatStrength>0.6 and floatStrength<=0.9):
+        print("The Password is Good")
+    else:
+        print("The Password is Strong")
 if __name__ == "__main__":
     main()
