@@ -26,7 +26,11 @@ def passwordValidator(password):
     return pass_strength
 def main():
     password=input("Enter Password\n")
-    print(passwordValidator(password))
+    passwordStrength=passwordValidator(password)
+    #print(passwordStrength)
+    floatStrength=float(('{0.real:.5f}'.format(passwordStrength)))*1.0
+    print(floatStrength)
+    #print(type(strStrength))
 
 if __name__ == "__main__":
     main()
