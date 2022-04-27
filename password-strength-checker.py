@@ -1,5 +1,6 @@
 from cmath import exp
 from getpass import getpass
+import stdiomask
 import re
 def passwordValidator(password):
     if(not(password and password.strip())):
@@ -26,7 +27,7 @@ def passwordValidator(password):
     pass_strength=logC(len(password)*digit)
     return pass_strength
 def main():
-    password=getpass()
+    password=stdiomask.getpass()
     passwordStrength=passwordValidator(password)
     #print(passwordStrength)
     floatStrength=float(('{0.real:.5f}'.format(passwordStrength)))*1.0
